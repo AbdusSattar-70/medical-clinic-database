@@ -160,7 +160,7 @@ If you like this project, Please give me ⭐️ and you can use it following [MI
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- I would like to thank and appreciate who contributes this project.
+- I would like to thank and appreciate who contributes this project. And I would like to thank my coding partner [Lovi Madaan](https://github.com/LoviMadaan) for her contribution to the project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
