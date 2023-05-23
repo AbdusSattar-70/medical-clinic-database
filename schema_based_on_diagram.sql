@@ -1,0 +1,40 @@
+create database clinic;
+
+CREATE TABLE patients (
+    id int generated always as identity,
+    name varchar(50),
+    date_of_birth date,
+    PRIMARY KEY (id)
+);
+
+
+CREATE TABLE medical_histories (
+   id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+   admitted_at TIMESTAMP,
+   patient_id INT REFERENCES patients(id),
+   status VARCHAR(50)
+);
+
+
+CREATE TABLE treatments (
+    id int generated always as identity PRIMARY KEY,
+	type varchar(10),
+	name varchar(50)
+);
+
+CREATE TABLE INVOICES (
+ID INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+TOTAL_AMOUNT DECIMAL,
+GENERATED_AT TIMESTAMP,
+PAYED_AT TIMESTAMP,
+MEDICAL_HISTORY_ID INT REFERENCES MEDICAL_HISTORIES(ID)
+);
+
+CREATE TABLE INVOICE_ITEMS (
+ID INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+UNIT_PRICE DECIMAL,
+QUANTITY INT,
+TOTAL_PRICE DECIMAL,
+INVOICE_ID INT REFERENCES INVOICES(ID),
+TREATMENT_ID INT REFERENCES TREATMENTS(ID)
+);
